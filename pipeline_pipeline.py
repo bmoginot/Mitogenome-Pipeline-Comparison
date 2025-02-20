@@ -20,13 +20,15 @@ def get_args(args):
 def make_outdir(outdir):
     if os.path.isdir(outdir):
         shutil.rmtree(outdir)
-    subprocess.run(["mkdir", outdir], check=True)
+    os.system(f"mkdir {outdir}")
     os.chdir(outdir)
     return
 
 def fastqc(f, r):
+    f_in = f"../{f}"
+    r_in = f"../{r}"
     try:
-        subprocess.run(["fastqc", f, r], check=True)
+        subprocess.run(["fastqc", f_in, r_in], check=True)
     except subprocess.CalledProcessError as e:
         print("Error in fastqc:", e)
         exit(1)
