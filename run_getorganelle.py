@@ -43,28 +43,25 @@ def fastp(f, r):
         exit(1)
     return f_out, r_out
 
-def mtgrasp():
-    pass
-
 def main():
     args = get_args(sys.argv[1:])
     acc, outdir = args.acc, args.output
     f_read = f"{acc}_1.fastq"
     r_read = f"{acc}_2.fastq"
-    print(f_read, r_read)
 
-    """make_outdir(outdir)
+    make_outdir(outdir)
 
     fastqc(f_read, r_read)
 
     f_clean, r_clean = fastp(f_read, r_read)
     
+    """
     ref = "/home/bmoginot/mtdna/sequence.fasta"
-    threads = 12
+    threads = 10
     mtgrasp(acc, ref, threads)
     return"""
 
-# python3 pipeline_pipeline.py -a SRR15139196 -o pp_test
+# python pipeline_pipeline.py -i SRR15139196_1.fastq -I SRR15139196_2.fastq -o pp_test
 
 if __name__ == "__main__":
     main()
