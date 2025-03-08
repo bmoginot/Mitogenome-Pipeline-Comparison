@@ -55,7 +55,8 @@ def main():
     fastqc(f_read, r_read)
 
     f_clean, r_clean = fastp(f_read, r_read)
-"""
+    
+    """
     ref = "/home/bmoginot/mtdna/sequence.fasta"
     threads = 10
     mtgrasp(acc, ref, threads)
