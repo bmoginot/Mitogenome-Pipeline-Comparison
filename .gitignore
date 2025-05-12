@@ -2,7 +2,6 @@
 *.fastq
 *.txt
 *.py
-data
 database-files
 mitoz_custom_db
 new-fish-data
