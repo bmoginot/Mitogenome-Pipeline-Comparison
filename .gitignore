@@ -1,4 +1,12 @@
 *.out
 *.fastq
-*.sh
 *.txt
+*.py
+data
+database-files
+mitoz_custom_db
+new-fish-data
+mtgrasp-cavefish-full-reads
+*.fa
+*.tre
+.snakemake
